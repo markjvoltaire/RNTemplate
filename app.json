@@ -1,27 +1,67 @@
 {
   "expo": {
-    "name": "app-template",
-    "slug": "app-template",
-    "version": "1.0.0",
+    "name": "Tizly",
+    "slug": "TizlyNative",
+    "scheme": "tizly",
+    "detach": {
+      "scheme": "tizly"
+    },
+    "notification": {
+      "icon": "./assets/icon.png",
+      "color": "#fff"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#ffffff"
+        }
+      ],
+      [
+        "expo-updates",
+        {
+          "username": "markjvoltaire"
+        }
+      ]
+    ],
+    "version": "73",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/iphoneSplash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "black"
     },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.markjvoltaire.TizlyNative",
+      "buildNumber": "192",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow access to photos to upload photos from your library."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.markjvoltaire.tizlyAndroid",
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "61c54675-42ec-4c84-86cf-09843327f703"
+      }
+    },
+    "owner": "markjvoltaire"
   }
 }
